@@ -9,4 +9,10 @@ services:
       - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=admin
       - POSTGRES_DB=androidDB
+  backend:
+    build:
+      context: .
+    ports:
+      - 8080:8080
+
     
