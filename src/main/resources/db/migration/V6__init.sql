@@ -1,1 +1,0 @@
-alter table public.cards add column version integer;

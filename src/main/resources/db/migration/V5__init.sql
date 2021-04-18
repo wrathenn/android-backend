@@ -1,1 +1,0 @@
-alter table public.card_categories add column version integer, add column access_level smallint;

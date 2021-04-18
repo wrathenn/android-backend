@@ -1,6 +1,0 @@
-а) Сделать docker compose
-    docker-compose -f androidBackend/docker-compose.yml
-    или что-то около этого
-б) sudo fuser -k 5432/tcp
-    если порт для бдшки занят уже то отвязать то что там было)
-в)
