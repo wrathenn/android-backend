@@ -20,7 +20,6 @@ public class Category {
     @Id
     private UUID id;
     private String name;
-    private boolean isAdult;
     private int version;
     private int accessLevel;
 }

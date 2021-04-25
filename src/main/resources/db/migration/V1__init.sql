@@ -1,4 +1,4 @@
-create extension pgcrypto;
+create extension if not exists pgcrypto;
 
 create table public.cards(
     id uuid primary key,
@@ -11,7 +11,6 @@ create table public.card_categories
 (
     id       uuid primary key default gen_random_uuid(),
     name     text not null,
-    is_adult boolean          default false,
     version integer,
     access_level smallint
 );

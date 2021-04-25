@@ -12,7 +12,6 @@ import java.util.List;
 @AllArgsConstructor
 public class CategoryWithCardsModel {
     private String name;
-    private boolean isAdult;
     private int version;
     private int accessLevel;
     private List<CardWithoutCategoryModel> cards;
