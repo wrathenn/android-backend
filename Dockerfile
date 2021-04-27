@@ -1,7 +1,6 @@
 FROM maven:3.6-jdk-11-slim AS build
 COPY src /home/androidBackendApp/src
 COPY pom.xml /home/androidBackendApp/
-ADD _postgres/ /docker-entrypoint-initdb.d/
 RUN mvn -f /home/androidBackendApp/pom.xml clean package
 
 FROM openjdk:8-jdk-alpine

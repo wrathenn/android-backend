@@ -10,7 +10,7 @@ services:
       - POSTGRES_PASSWORD=admin
       - POSTGRES_DB=androidDB
     volumes:
-      - './_postgres/:/docker-entrypoint-initdb.d/'
+      - ./_postgres:/var/lib/postgresql/data
   backend:
     build:
       context: .
