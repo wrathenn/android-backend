@@ -53,9 +53,9 @@ public class CategoryService {
                         it.getKey().getName(),
                         it.getKey().getVersion(),
                         it.getKey().getAccessLevel(),
-                        it.getValue().stream().map(itCard -> itCard.getVersion() > version
-                                ? itCard.toCardWithoutCategoryModel()
-                                : null).collect(Collectors.toList())
-                )).collect(Collectors.toList());
+                        it.getValue().stream().filter(itCard -> itCard.getVersion() > version)
+                                .map(Card::toCardWithoutCategoryModel)
+                                .collect(Collectors.toList()))
+                ).collect(Collectors.toList());
     }
 }
